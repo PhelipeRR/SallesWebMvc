@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SallesWebMvc.Models;
+using SallesWebMvc.Models.ViwerModels;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -25,6 +26,12 @@ namespace SallesWebMvc.Controllers
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
+
+            return View();
+        }
+        public IActionResult Departments()
+        {
+            
 
             return View();
         }
