@@ -14,6 +14,8 @@ namespace SallesWebMvc.Data
         {
         }
 
-        public DbSet<SallesWebMvc.Models.Departament> Departament { get; set; }
+        public DbSet<Departament> Departament { get; set; }
+        public DbSet<SaleRecord> SaleRecord { get; set; }
+        public DbSet<Saller> Saller { get; set; }
     }
 }
