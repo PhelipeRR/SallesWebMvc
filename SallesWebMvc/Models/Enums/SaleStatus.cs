@@ -8,7 +8,7 @@ namespace SallesWebMvc.Models.Enums
     public enum SaleStatus: int
     {
         Pending = 0,
-        Biled = 1,
+        Billed = 1,
         Canceled = 2,
     }
 }
