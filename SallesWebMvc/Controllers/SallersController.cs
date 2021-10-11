@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SallesWebMvc.Models;
 using SallesWebMvc.Services;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,17 @@ namespace SallesWebMvc.Controllers
         {
             var list = _sellerService.FindAll();
             return View(list);
+        }
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Saller sallers)
+        {
+            _sellerService.Insert(sallers);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
